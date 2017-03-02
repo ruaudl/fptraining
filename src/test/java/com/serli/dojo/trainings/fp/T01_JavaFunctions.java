@@ -11,19 +11,24 @@ import static org.junit.Assert.assertThat;
 
 public class T01_JavaFunctions {
 
-    private final List<Integer> dice = Arrays.asList(1, 2, 3, 4, 5);
-
     @Test
     public void E01_objectMethodReference() throws Exception {
-        Roll roll = null; //TODO: create an instance using 'Roll' class constructor and object 'dice' as parameter
+        Integer index = 1;
+        List<Integer> dice = Arrays.asList(1, 2, 3, 4, 5);
+
+        Roll roll = null; //TODO: create an instance using 'Roll' class constructor and objects 'index' and 'dice' as parameter
 
         Supplier<String> toString = null; //TODO: get the reference to the 'toString' method of the object 'roll'
         assertThat(toString, notNullValue());
         assertThat(toString.get(), containsString("Roll"));
 
-        Supplier<List<Integer>> getter = null; //TODO: get the reference to the 'toString' method of the object 'roll'
-        assertThat(toString, notNullValue());
-        assertThat(toString.get(), equalTo(dice));
+        Supplier<Integer> indexGetter = null; //TODO: get the reference to the 'getIndex' method of the object 'roll'
+        assertThat(indexGetter, notNullValue());
+        assertThat(indexGetter.get(), equalTo(index));
+
+        Supplier<List<Integer>> diceGetter = null; //TODO: get the reference to the 'getDice' method of the object 'roll'
+        assertThat(diceGetter, notNullValue());
+        assertThat(diceGetter.get(), equalTo(dice));
     }
 
     @Test

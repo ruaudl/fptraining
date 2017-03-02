@@ -29,12 +29,14 @@ En revanche, des évolutions de syntaxe permettent de se concentrer sur le code 
 
 Commençons par créer une première classe Java classique.
 
-**TODO:** Créez une classe `Roll` destinée à porter un jet de dés.
+Cette classe portera la valeur des dés jetés dans une liste d'entier ainsi que l'index du lancé.
+Nous définirons ces champs à la sauce *JavaBean*.
 
-Cette classe portera la valeur des dés jetés dans une liste d'entier.
-Nous définirons ce champ à la sauce *JavaBean* mais garantiront son **immutabilité**.
+**TODO:** Définissez les champs `index` et  `dice` respectivement de type `Integer` et `List<Integer>`.
+ 
+**TODO:** Définissez le constructeur permettant de définir les champs.
 
-**TODO:** Définissez un champ `dice` de type `List<Integer>` avec le constructeur permettant de le définir et le getter permettant de l'obtenir.
+**TODO:** Définissez les getters permettant d'obtenir la valeur des champs.
 
 **TODO:** Complétez le test E01 de la classe T01.
 
@@ -44,8 +46,6 @@ Nous définirons ce champ à la sauce *JavaBean* mais garantiront son **immutabi
 Créons une deuxième classe Java nommée `Dice`. 
 Cette classe sera définie comme une classe utilitaire classique et portera donc des méthodes statiques.
 L'objectif de cette classe est de fournir des lancés de dés.
-
-**TODO:** Créez une classe `Dice` destinée à lancer les dés.
 
 Le lancé d'un seul dé sera défini par la méthode `roll`. 
 Elle ne prend pas de paramètres et retourne un entier.
