@@ -16,17 +16,17 @@ public class T01_JavaFunctions {
         Integer index = 1;
         List<Integer> dice = Arrays.asList(1, 2, 3, 4, 5);
 
-        Roll roll = null; //TODO: create an instance using 'Roll' class constructor and objects 'index' and 'dice' as parameter
+        Roll roll = new Roll(1, dice); //TODO: create an instance using 'Roll' class constructor and object 'dice' as parameter
 
-        Supplier<String> toString = null; //TODO: get the reference to the 'toString' method of the object 'roll'
+        Supplier<String> toString = roll::toString; //TODO: get the reference to the 'toString' method of the object 'roll'
         assertThat(toString, notNullValue());
         assertThat(toString.get(), containsString("Roll"));
 
-        Supplier<Integer> indexGetter = null; //TODO: get the reference to the 'getIndex' method of the object 'roll'
+        Supplier<Integer> indexGetter = roll::getIndex; //TODO: get the reference to the 'getIndex' method of the object 'roll'
         assertThat(indexGetter, notNullValue());
         assertThat(indexGetter.get(), equalTo(index));
 
-        Supplier<List<Integer>> diceGetter = null; //TODO: get the reference to the 'getDice' method of the object 'roll'
+        Supplier<List<Integer>> diceGetter = roll::getDice; //TODO: get the reference to the 'getDice' method of the object 'roll'
         assertThat(diceGetter, notNullValue());
         assertThat(diceGetter.get(), equalTo(dice));
     }
